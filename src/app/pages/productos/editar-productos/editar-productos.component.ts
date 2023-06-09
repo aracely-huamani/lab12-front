@@ -23,7 +23,8 @@ export class EditarProductosComponent implements OnInit {
         producto: ['', Validators.required],
         categoria: ['', Validators.required],
         ubicacion: ['', Validators.required],
-        precio: ['', Validators.required]
+        precio: ['', Validators.required],
+        imagen: ['', Validators.required]
     })
     this.id = aRouter.snapshot.paramMap.get('id');
   }
@@ -42,7 +43,8 @@ export class EditarProductosComponent implements OnInit {
           producto: data.producto,
           categoria: data.categoria,
           ubicacion: data.ubicacion,
-          precio: data.precio
+          precio: data.precio,
+          imagen: data.imagen
         })
       })
     }
@@ -56,6 +58,7 @@ export class EditarProductosComponent implements OnInit {
       categoria: this.productoForm.get('categoria')?.value,
       ubicacion: this.productoForm.get('ubicacion')?.value,
       precio: this.productoForm.get('precio')?.value,
+      imagen: this.productoForm.get('imagen')?.value,
     }
 
     Swal.fire({

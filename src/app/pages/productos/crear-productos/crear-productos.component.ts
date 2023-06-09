@@ -21,7 +21,8 @@ export class CrearProductosComponent {
         producto:  ['', Validators.required],
         categoria: ['', Validators.required],
         ubicacion: ['', Validators.required],
-        precio:    ['', Validators.required]
+        precio:    ['', Validators.required],
+        imagen:    ['', Validators.required]
     })
   }
 
@@ -32,6 +33,7 @@ export class CrearProductosComponent {
       categoria: this.productoForm.get('categoria')?.value,
       ubicacion: this.productoForm.get('ubicacion')?.value,
       precio: this.productoForm.get('precio')?.value,
+      imagen: this.productoForm.get('imagen')?.value,
     }
 
     console.log(PRODUCTO)

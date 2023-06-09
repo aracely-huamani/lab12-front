@@ -48,6 +48,15 @@
                                             <span>El precio <strong>es obligatorio</strong></span>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label>Imagen</label>
+                                        <input type="number" formControlName="imagen" 
+                                            class="form-control" placeholder="Ingresar Imagen">
+                                        <div class="text-danger"
+                                            *ngIf="productoForm.get('imagen')?.hasError('required') && productoForm.get('imagen')?.touched">
+                                            <span>La imagen <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
                                     <div  class="col-sm-12 text-right">
                                         <div class="panel-body buttons-margin">
                                            <button type="submit" [disabled]="productoForm.invalid" class="btn btn-w-md btn-success">Guardar</button>&nbsp;&nbsp;
