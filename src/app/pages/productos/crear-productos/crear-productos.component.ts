@@ -28,7 +28,19 @@ export class CrearProductosComponent {
     })
   }
 
+  fileEvent(fileInput:Event){
+
+    let file = (<HTMLInputElement>fileInput.target).files[0];
+
+    if (file.type == "image/jpg" || file.type == "image/jpeg") {
+      this.archivo = new Imagen(this.lastPK + 1 , file.name , file.type);
+    }
+
+  }
+
   agregarProducto(){
+
+
 
     const PRODUCTO: Producto = {
       producto: this.productoForm.get('producto')?.value,
@@ -37,6 +49,8 @@ export class CrearProductosComponent {
       precio: this.productoForm.get('precio')?.value,
       imagen: this.productoForm.get('imagen')?.value,
     }
+
+ 
 
     console.log(PRODUCTO)
 
