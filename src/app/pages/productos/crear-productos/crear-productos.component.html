@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Imagen</label>
-                                        <input type="number" formControlName="imagen" 
+                                        <input type="file" formControlName="imagen" 
                                             class="form-control" placeholder="Ingresar Imagen">
                                         <div class="text-danger"
                                             *ngIf="productoForm.get('imagen')?.hasError('required') && 

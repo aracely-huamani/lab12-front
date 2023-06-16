@@ -12,6 +12,8 @@ import Swal from 'sweetalert2'
 })
 export class CrearProductosComponent {
 
+  
+
   productoForm: FormGroup;
 
   constructor(private fb: FormBuilder,
@@ -59,7 +61,7 @@ export class CrearProductosComponent {
     
   }
 
-    //console.log(this.productoForm)
+  
   
 
 }
